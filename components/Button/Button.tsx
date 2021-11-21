@@ -8,7 +8,7 @@ export const Button = ({appearance, arrow = 'none', children, className, ...prop
        <button className={cn(styles.button, className, {   //cn - функция, куда передаются наборы классов через запятую, либо объект с условием. первым элементом передаем просто button, 
               [styles.primary] : appearance === 'primary', //а это уже условие. применится класс primary в случае, если передан appearance primary (это пропс)
               [styles.ghost] : appearance === 'ghost'  
-              })}
+              })}        {...props}
        >
               {children}
               {arrow != 'none' && <span className={cn(styles.arrow,{
