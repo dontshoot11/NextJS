@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Tag, Htag,Ptag, Button, Rating } from "../components";
+import { Layout, withLayout } from "../layout/Layout";
 
 
 
-export default function Home(): JSX.Element {  
+function Home(): JSX.Element {  
   const [counter, setCounter] = useState<number>(0);
   const [rating, setRating] = useState<number>(0)
 
@@ -26,3 +27,5 @@ export default function Home(): JSX.Element {
     </>
   );
 }
+
+export default withLayout(Home)
