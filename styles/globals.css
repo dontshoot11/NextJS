@@ -6,7 +6,7 @@ body {
     color: var(--black);
     background: var(--primary-bg);
 
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -30,5 +30,5 @@ a {
     --red: #fc836d;
     --green: #1dc37e;
     --green-light: #c8f8e4;
-    --font-family: 'Noto Sans KR', sans-serif;
+    --font-family: 'Roboto', sans-serif;
 }

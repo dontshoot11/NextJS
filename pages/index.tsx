@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Tag, Htag, Ptag, Button, Rating } from '../components';
-import { Layout, withLayout } from '../layout/Layout';
+import { withLayout } from '../layout/Layout';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
