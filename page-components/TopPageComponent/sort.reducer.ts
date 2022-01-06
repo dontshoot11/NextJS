@@ -1,5 +1,5 @@
 import { SortEnum } from '../../components/Sort/Sort.props';
-import { ProductModel } from '../../interfaces/product';
+import { ProductModel } from '../../interfaces/product.interface';
 
 export type SortActions =
     | {

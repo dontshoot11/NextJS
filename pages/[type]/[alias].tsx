@@ -8,7 +8,7 @@ import {
     TopPageModel,
 } from '../../interfaces/page.interface';
 import { ParsedUrlQuery } from 'querystring';
-import { ProductModel } from '../../interfaces/product';
+import { ProductModel } from '../../interfaces/product.interface';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { TopPageComponent } from '../../page-components';
 
