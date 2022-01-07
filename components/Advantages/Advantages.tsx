@@ -1,7 +1,6 @@
 import { AdvantagesProps } from './Advantages.props';
 import styles from './Advantages.module.css';
 import CheckIcon from './icon.svg';
-import { useReducer } from 'react';
 
 export const Advantages = ({ advantages }: AdvantagesProps): JSX.Element => {
     return (

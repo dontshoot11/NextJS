@@ -1,12 +1,27 @@
+.wrapper {
+    position: relative;
+}
+
 .star {
-	padding: 0 2px;
-	transition: fill(0.2s);
+    padding: 0 2px;
+    transition: fill(0.2s);
 }
 
 .editable {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .filled {
-	fill: var(--primary);
+    fill: var(--primary);
+}
+
+.error {
+    stroke: var(--red);
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    color: var(--red);
 }
