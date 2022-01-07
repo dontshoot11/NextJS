@@ -1,9 +1,8 @@
+import styles from './Menu.module.css';
+import cn from 'classnames';
 import { useContext } from 'react';
 import { AppContext } from '../../context/app.context';
 import { FirstLevelMenuItem, PageItem } from '../../interfaces/menu.interface';
-import styles from './Menu.module.css';
-
-import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { firstLevelMenu } from '../../helpers/helpers';
@@ -12,11 +11,11 @@ export const Menu = (): JSX.Element => {
     const { menu, setMenu, firstCategory } = useContext(AppContext);
     const router = useRouter();
 
-    const switchSecondLevel = (secondCategory: string) => {
+    const openSecondLevel = (secondCategory: string) => {
         setMenu &&
             setMenu(
                 menu.map((m) => {
-                    if (m._id.secondCategory === secondCategory) {
+                    if (m._id.secondCategory == secondCategory) {
                         m.isOpened = !m.isOpened;
                     }
                     return m;
@@ -27,22 +26,22 @@ export const Menu = (): JSX.Element => {
     const buildFirstLevel = () => {
         return (
             <>
-                {firstLevelMenu.map((menu) => (
-                    <div key={menu.route}>
-                        <Link href={`/${menu.route}`}>
+                {firstLevelMenu.map((m) => (
+                    <div key={m.route}>
+                        <Link href={`/${m.route}`}>
                             <a>
                                 <div
                                     className={cn(styles.firstLevel, {
                                         [styles.firstLevelActive]:
-                                            menu.id === firstCategory,
+                                            m.id == firstCategory,
                                     })}
                                 >
-                                    {menu.icon}
-                                    <span>{menu.name}</span>
+                                    {m.icon}
+                                    <span>{m.name}</span>
                                 </div>
                             </a>
                         </Link>
-                        {menu.id === firstCategory && buildSecondLevel(menu)}
+                        {m.id == firstCategory && buildSecondLevel(m)}
                     </div>
                 ))}
             </>
@@ -58,14 +57,14 @@ export const Menu = (): JSX.Element => {
                             .map((p) => p.alias)
                             .includes(router.asPath.split('/')[2])
                     ) {
-                        m.isOpened = !m.isOpened;
+                        m.isOpened = true;
                     }
                     return (
                         <div key={m._id.secondCategory}>
                             <div
                                 className={styles.secondLevel}
                                 onClick={() =>
-                                    switchSecondLevel(m._id.secondCategory)
+                                    openSecondLevel(m._id.secondCategory)
                                 }
                             >
                                 {m._id.secondCategory}
