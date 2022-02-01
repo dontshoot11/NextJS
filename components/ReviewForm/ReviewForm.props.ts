@@ -7,4 +7,5 @@ export interface ReviewFormProps
         HTMLParagraphElement
     > {
     productId: string;
+    isOpened: boolean;
 }
