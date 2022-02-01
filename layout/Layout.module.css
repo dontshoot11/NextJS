@@ -8,6 +8,7 @@
     min-height: 100vh;
     gap: 40px 30px;
     grid-template-rows: auto 1fr auto;
+    overflow: hidden;
 }
 
 .header {

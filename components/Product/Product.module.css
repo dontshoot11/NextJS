@@ -101,6 +101,11 @@
     line-height: 19px;
 }
 
+.reviews {
+    padding: 30px;
+    overflow: hidden;
+}
+
 .reviewButton {
     margin-left: 20px;
 }
@@ -144,17 +149,6 @@
 .characteristicsDots {
     border-bottom: 1px dashed var(--gray-light);
     margin-bottom: 5px;
-}
-
-.closed {
-    overflow: hidden;
-    max-height: 0;
-    padding: 0;
-}
-
-.opened {
-    max-height: auto;
-    padding: 30px;
 }
 
 @media screen and (max-width: 1320px) {

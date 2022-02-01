@@ -9,6 +9,7 @@ import { SortEnum } from '../../components/Sort/Sort.props';
 import { useEffect, useReducer } from 'react';
 import { sortReducer } from './sort.reducer';
 import { Product } from '../../components/Product/Product';
+import { useScrollY } from '../../hooks/UseScrollY';
 
 export const TopPageComponent = ({
     page,
@@ -19,6 +20,8 @@ export const TopPageComponent = ({
         sortReducer,
         { products, sort: SortEnum.Rating }
     );
+
+    const y = useScrollY();
 
     const setSort = (sort: SortEnum) => {
         dispatchSort({ type: sort });
@@ -32,11 +35,12 @@ export const TopPageComponent = ({
         <div className={styles.wrapper}>
             <div className={styles.title}>
                 <Htag tag="h1">{page.title}</Htag>
-                <Tag color="gray">{products && products.length}</Tag>
                 <Sort sort={sort} setSort={setSort} />
             </div>
             {sortedProducts &&
-                sortedProducts.map((p) => <Product key={p._id} product={p} />)}
+                sortedProducts.map((p) => (
+                    <Product layout key={p._id} product={p} />
+                ))}
             <div className={styles.hhTitle}>
                 <Htag tag="h2">Вакансии - {page.category}</Htag>
                 <Tag color="red">hh.ru</Tag>

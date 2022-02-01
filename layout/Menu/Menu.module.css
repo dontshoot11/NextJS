@@ -29,6 +29,10 @@
     font-weight: 300;
 }
 
+.secondLevelBlock {
+    overflow: hidden;
+}
+
 .secondBlock {
     margin-top: 15px;
     margin-left: 12px;
@@ -36,26 +40,18 @@
     border-left: 1px solid #dfdfdf;
 }
 
-.secondLevelBlock {
-    display: none;
-}
-
-.secondLevelBlockOpened {
-    display: block;
-}
-
-.secondBlockOpened:last-child {
-    margin-bottom: 20px;
+.thirdLevelWrap {
+    display: grid;
+    align-items: center;
 }
 
 .thirdLevel {
-    margin-bottom: 10px;
     display: block;
     cursor: pointer;
     color: var(--gray-dark);
     font-size: 14px;
     font-weight: 500;
-    line-height: 19px;
+    line-height: 12px;
 }
 
 .thirdLevelActive,
