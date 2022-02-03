@@ -1,38 +1,42 @@
 .button {
-    width: 40px;
-    height: 40px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 40px;
+	height: 40px;
+
+	cursor: pointer;
+
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 4px rgb(0 0 0 / 50%);
 }
 
 .primary {
-    background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .primary svg * {
-    fill: var(--white);
+	fill: var(--white);
 }
 
 .primary:hover {
-    background-color: var(--primary-hov);
+	background-color: var(--primary-hov);
 }
 
 .white {
-    background-color: var(--white);
+	background-color: var(--white);
 }
+
 .white:hover {
-    background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .white svg * {
-    fill: var(--primary);
+	fill: var(--primary);
 }
 
 .white:hover svg * {
-    fill: var(--white);
+	fill: var(--white);
 }

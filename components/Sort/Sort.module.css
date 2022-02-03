@@ -1,26 +1,29 @@
 .sortIcon {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .active .sortIcon {
-    visibility: visible;
+	visibility: visible;
 }
 
 .active {
-    font-weight: bold;
-    color: var(--primary);
+	color: var(--primary);
+
+	font-weight: bold;
 }
 
 .sort {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
 }
 
 .sort span {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: 20px 1fr;
-    align-items: center;
-    cursor: pointer;
+	display: grid;
+	gap: 8px;
+	grid-template-columns: 20px 1fr;
+
+	align-items: center;
+
+	cursor: pointer;
 }
